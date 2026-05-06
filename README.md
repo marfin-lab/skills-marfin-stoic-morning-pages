@@ -27,7 +27,7 @@ Resposta: 5 perguntas curtas em sequência → entrada formatada pra salvar.
 ### Opção 2: Claude Code
 
 ```bash
-git clone https://github.com/marfin-co/skills-marfin-stoic-morning-pages.git ~/.claude/skills/stoic-morning-pages
+git clone https://github.com/marfin-lab/skills-marfin-stoic-morning-pages.git ~/.claude/skills/stoic-morning-pages
 ```
 
 ## A tradição
