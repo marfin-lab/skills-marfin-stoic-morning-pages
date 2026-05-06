@@ -1,5 +1,5 @@
 ---
-name: marfin-estoic-morning-pages
+name: marfin-stoic-morning-pages
 description: "Use this skill whenever the user wants to do a morning Stoic journaling exercise, asks for 'morning pages', 'jornal estoico', 'journaling estoico', 'pages matinais', 'reflexão matinal', 'meditação estoica', or wants to start the day with structured Stoic reflection. The skill guides the user through a 5-step Stoic morning practice (premeditatio malorum, dichotomia tou ephemin, view from above, daily intention, gratitude triad) and produces a dated journal entry the user can save. Do NOT use this skill for general philosophy discussion (just chat normally), evening reflection (use marfin-evening-examen instead), or non-Stoic mindfulness (use general meditation tools)."
 license: MIT
 version: 1.0.0
@@ -7,7 +7,7 @@ author: Marfin Co. + @estoicodiario
 requires_mcp: []
 ---
 
-# Estoic Morning Pages
+# Stoic Morning Pages
 
 ## What this skill does
 
@@ -130,7 +130,7 @@ Para Step 5 (Gratidão):
 ## Files in this skill
 
 ```
-marfin-estoic-morning-pages/
+marfin-stoic-morning-pages/
 ├── SKILL.md                          (this file)
 ├── templates/
 │   ├── morning-page.md               (Markdown journal entry)

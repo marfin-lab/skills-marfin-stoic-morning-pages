@@ -1,4 +1,4 @@
-# marfin-estoic-morning-pages
+# marfin-stoic-morning-pages
 
 Prática matinal estoica em 5 passos, dentro do Claude. Em até 10 minutos, gera uma morning page completa com premeditatio malorum, dicotomia do controle, vista do alto, intenção do dia e tríade da gratidão.
 
@@ -27,7 +27,7 @@ Resposta: 5 perguntas curtas em sequência → entrada formatada pra salvar.
 ### Opção 2: Claude Code
 
 ```bash
-git clone https://github.com/marfin-co/skills-marfin-estoic-morning-pages.git ~/.claude/skills/estoic-morning-pages
+git clone https://github.com/marfin-co/skills-marfin-stoic-morning-pages.git ~/.claude/skills/stoic-morning-pages
 ```
 
 ## A tradição
