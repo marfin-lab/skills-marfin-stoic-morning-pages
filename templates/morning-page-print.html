@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Morning Page — {{date}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  /* ============================================
+     MARFIN SKILLS — DESIGN SYSTEM (Rankz dark)
+     ============================================ */
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
+    --surface: 0 0% 7%;
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 53%;
+    --subtle: 0 0% 33%;
+    --border: 0 0% 13%;
+    --status-success: 146 83% 34%;
+    --radius: 0.75rem;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px; height: 1080px;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 64px;
+    display: flex; flex-direction: column;
+  }
+
+  /* Tipografia */
+  .t-eyebrow {
+    font-family: 'Geist Mono', monospace;
+    font-weight: 500; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: hsl(var(--muted-foreground));
+  }
+  .t-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px; line-height: 1.5;
+    color: hsl(var(--foreground));
+  }
+  .t-attribution {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: hsl(var(--subtle));
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* HEADER */
+  .header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(var(--border));
+    margin-bottom: 24px;
+  }
+  .header-left { display: flex; flex-direction: column; gap: 8px; }
+  .brand-row { display: flex; align-items: center; gap: 10px; }
+  .brand-mark {
+    width: 24px; height: 24px;
+    background: hsl(var(--foreground));
+    color: hsl(var(--background));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Geist Mono', monospace;
+    font-weight: 700; font-size: 13px;
+    border-radius: 4px;
+  }
+  .brand-name {
+    font-family: 'Geist Mono', monospace;
+    font-weight: 600; font-size: 13px; letter-spacing: 0.04em;
+  }
+  .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px; font-weight: 500;
+    line-height: 1.1; letter-spacing: -0.01em;
+    margin-top: 8px;
+  }
+  .header-right { text-align: right; }
+  .date-label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: hsl(var(--muted-foreground));
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+  .date-value {
+    font-family: 'Geist Mono', monospace;
+    font-size: 20px; font-weight: 600;
+    color: hsl(var(--foreground));
+    margin-top: 4px;
+  }
+
+  /* QUOTE BLOCK */
+  .quote-block {
+    background: hsl(var(--surface));
+    border-left: 2px solid hsl(var(--foreground));
+    padding: 18px 22px;
+    margin-bottom: 28px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+
+  /* SECTIONS */
+  .sections { display: flex; flex-direction: column; gap: 20px; flex: 1; }
+  .section {
+    background: hsl(var(--surface));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .section-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid hsl(var(--border));
+    padding-bottom: 6px;
+    margin-bottom: 4px;
+  }
+  .section-num {
+    font-family: 'Geist Mono', monospace;
+    font-weight: 600; font-size: 10px;
+    color: hsl(var(--subtle));
+    letter-spacing: 0.08em;
+  }
+  .section-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px; font-weight: 500;
+    color: hsl(var(--foreground));
+  }
+  .section-content {
+    font-size: 14px; line-height: 1.55;
+    color: hsl(var(--foreground));
+  }
+  .section-content p { margin-top: 4px; }
+  .label-inline {
+    font-family: 'Geist Mono', monospace;
+    font-size: 10px;
+    color: hsl(var(--muted-foreground));
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-right: 6px;
+  }
+
+  /* FOOTER */
+  .footer {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 18px;
+    border-top: 1px solid hsl(var(--border));
+    margin-top: 24px;
+  }
+  .footer-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: hsl(var(--muted-foreground));
+  }
+  .footer-brand {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: hsl(var(--muted-foreground));
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <div class="brand-row">
+      <div class="brand-mark">M</div>
+      <div class="brand-name">MARFIN / MORNING PAGE</div>
+    </div>
+    <div class="title">Morning Page</div>
+  </div>
+  <div class="header-right">
+    <div class="date-label">DATA</div>
+    <div class="date-value">{{date}}</div>
+  </div>
+</div>
+
+<!-- OPENING QUOTE -->
+<div class="quote-block">
+  <div class="t-quote">{{opening_quote}}</div>
+  <div class="t-attribution">{{opening_attribution}}</div>
+</div>
+
+<!-- SECTIONS -->
+<div class="sections">
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">I · PREMEDITATIO MALORUM</span>
+      <span class="section-name">Premeditação dos Males</span>
+    </div>
+    <div class="section-content">
+      <p>1. {{difficulty_1}}</p>
+      <p>2. {{difficulty_2}}</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">II · DICHOTOMIA TOU EPHEMIN</span>
+      <span class="section-name">Dicotomia do Controle</span>
+    </div>
+    <div class="section-content">
+      <p><span class="label-inline">CONTROLO</span>{{controllable}}</p>
+      <p><span class="label-inline">NÃO CONTROLO</span>{{uncontrollable}}</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">III · VIEW FROM ABOVE</span>
+      <span class="section-name">Vista do Alto</span>
+    </div>
+    <div class="section-content">
+      <p>{{view_from_above}}</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">IV · INTENTIO DIEI</span>
+      <span class="section-name">Intenção do Dia</span>
+    </div>
+    <div class="section-content">
+      <p><span class="label-inline">VIRTUDE</span>{{virtue}}</p>
+      <p><span class="label-inline">SITUAÇÃO</span>{{situation}}</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">V · GRATITUDO</span>
+      <span class="section-name">Tríade da Gratidão</span>
+    </div>
+    <div class="section-content">
+      <p><span class="label-inline">PASSADO</span>{{gratitude_past}}</p>
+      <p><span class="label-inline">PRESENTE</span>{{gratitude_present}}</p>
+      <p><span class="label-inline">FUTURO</span>{{gratitude_future}}</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-quote">Memento mori · Memento vivere</div>
+  <div class="footer-brand">MARFIN SKILLS · @ESTOICODIARIO</div>
+</div>
+
+</body>
+</html>
